@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'QuattrocentoSans';
+  src:url('police/QuattrocentoSans.eot');
+  src:url('police/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
+    url('police/QuattrocentoSans-Regular.otf') format('opentype'),
+    url('police/QuattrocentoSans.ttf') format('truetype'),
+    url('police/QuattrocentoSans.woff') format('woff'),
+    url('police/QuattrocentoSans.woff2') format('woff2');    
+  font-weight: normal;
+  font-style: normal;}
+
+/* generalités*/
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+a
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li
+{
+  list-style-type: none;
+}
+
+* {box-sizing: border-box;}
+
+/*
+input::placeholder, textarea::placeholder, 
+input::-ms-placeholder, textarea::-ms-placeholder,
+input::-moz-placeholder, textarea::-moz-placeholder;
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #656565;
+  font-size: 1em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder, 
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder, 
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder, 
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+  color: #478efc;
+}
+
+
+/* on hover placeholder */
+
+/*
+input:hover::placeholder, textarea:hover::placeholder, 
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder, 
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder{
+  color: #656565;
+  font-size: 1em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder, 
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder, 
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder, 
+input:hover:focus::-ms-placeholder, textarea:hover::focus::-ms-placeholder {
+  color: green;
+}
+*/
+
+
+#wrapper
+{
+  display:block;
+  margin:auto;
+  background-image:url('image/bleu.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 2% 2%;
+  font-family: 'QuattrocentoSans', Arial, sans;
+  height: 100vh;
+}
+
+#inner
+{
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 98%;
+  margin:auto;
+}
+
+
+header {
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+  max-width:70%;
+  cursor: default;
+  border-bottom: dotted 2.5px;
+  color: #082eac;
+
+  animation-name: flash_border;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: flash_border;
+  -webkit-animation-duration: 3.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: flash_border;
+  -moz-animation-duration: 3.5s;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash_border {
+  0% {border-color: red;}
+  25% {border-color: #082eac;}
+  50% {border-color: orange;}
+  75% {border-color: pink;}
+  100% {border-color: #800000;}
+}
+
+#form {
+  position: relative;
+  margin:auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  min-width: 470px;
+  min-height: 260px;
+  align-items: center;
+}
+
+input {
+  font-family: 'QuattrocentoSans', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  margin:-0.5px 0px 0px 0px;
+  
+  background: transparent;
+  outline: none;
+  color: #656565;
+  
+  border: solid 1px #082eac;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #082eac;
+  color: #F5F5F5;
+}
+
+textarea {
+  width: 100%;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  margin: -0.5px 0px 0px 0px;
+  resize: none; 
+  
+  background: transparent;
+  outline: none;
+  color: #656565;
+  font-family: 'QuattrocentoSans', sans-serif;
+  font-size: 1.1em;
+  
+  border: solid 1px #082eac;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #082eac;
+  color: #F5F5F5;
+}
+
+#submit {
+  width: 20%;
+  justify-content: center;
+  align-content: center;
+  padding: 0;
+  margin: 5px 0px 0px 0px;
+  
+  font-family: 'QuattrocentoSans', sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  background-color: orange;
+  color:#656565;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px orange;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #62aafb;
+}
+
+@media screen and (max-device-width:480px), screen and (max-width: 500px)
+{
+  #wrapper
+  {
+    display:block;
+    margin:auto;
+    background-image:none;
+    padding: none;
+  }
+
+  header 
+  {
+  margin: 40px auto 15px auto;
+  font-size: 2em;
+  }
+
+  #form 
+  {
+  width:100%;
+  min-width: inherit;  
+  }
+
+  #submit {
+  width: 100%;
+}
