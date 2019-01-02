@@ -1,0 +1,343 @@
+.bold, strong {font-weight: bold;}
+.italic, em {font-style :italic;}
+
+.titre
+{
+	letter-spacing: 0.04em;	
+	font-family: "QuattrocentoRoman", serif;
+	min-width: 90%;
+}
+
+.principal
+{
+	font-size: 3.3em;
+	line-height:130%;
+	margin-bottom: 20px;
+	/*! text-align: left; */
+	font-weight: bold;
+	letter-spacing: 0.04em;
+}
+.sous-titre
+{
+	letter-spacing: 0.04em;
+	font-size:1.5em;
+	line-height: 120%;
+	margin-bottom: 20px;
+}
+.date 
+{
+	text-transform: uppercase; 
+	font-size: 0.8em;
+	color: #656565;
+	margin-bottom: 20px;
+}
+
+/* titre : 2 versions ==> image format portrait et carré vs. image format paysage*/
+.format-paysage.titre
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin:auto;
+	margin-bottom: 35px;
+}
+	.format-paysage.titre img
+	{
+		max-width : 100%;
+		height: auto;
+		max-height: 500px;
+	}
+	.format-paysage .titre-texte
+	{
+		margin: auto;
+		justify-content: center;
+	}
+	.format-paysage .image-intro
+	{
+		text-align: center;
+		margin: auto;
+	}
+.format-portrait.titre
+{
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: auto;
+	margin-bottom: 35px;
+}
+  .format-portrait.titre img
+	{
+		max-height: 500px;
+		width:auto;
+		max-width: 100%;
+	}
+	.format-portrait .titre-texte
+	{
+		margin : auto;
+		margin-right:30px;
+		flex:50%;
+	}
+	.format-portrait .image-intro
+	{
+		text-align: center;
+		margin: auto;
+	}
+
+
+/*surligner les liens + changement de couleur lors du hover*/
+.lien-couleur
+{
+	border-bottom: solid 1px;
+	border-bottom-color:inherit;
+	transition: all 0.4s ease;
+}
+	.lien-couleur.rouge {border-color: #DC143C;}
+	.lien-couleur.vert {border-color : #32CD32;}
+	.lien-couleur.bleu {border-color: #509fff;}
+
+.lien-couleur:hover
+{
+	border-bottom: none;
+	transition: all 0.4s ease ease-out;
+}
+	.lien-couleur.rouge:hover{color:#DC143C;}
+  	.lien-couleur.vert:hover{color:#32CD32;}
+  	.lien-couleur.bleu:hover{color:#509fff;}
+
+#inner p
+{
+	text-align: justify;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+	word-wrap: break-word;
+	line-height: 120%;
+}
+
+.justify-left
+{
+	text-align: left;
+}
+
+/*figure[class="image-intro"] */
+
+
+.clear-float-right
+{
+	clear: both;
+}
+
+figcaption[class="image-intro"]
+{
+	margin-top: 5px;
+}
+figcaption
+{
+	caption-side: bottom-outside; 
+	color:#656565;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+figure[class="image-centre"]
+/*figure avec image au centre de la page*/
+{
+	margin-top:10px;
+	max-width: 95%;
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+	figure[class="image-centre"] img 
+	{
+		max-width:100%;
+		height: auto;
+	}
+
+figure[class="texte"]
+{
+	display: block;
+	border:1px solid #656565;
+	font-size: 1.2em;
+	text-align: justify;
+	justify-content: center;
+	align-content: center;
+	height:auto;
+	width: 95%;
+	margin:auto;
+	padding:5px;
+	transition: all 0.4s ease-in;
+}
+figure[class="texte"]:hover
+{
+	background-color:white;
+	border:2px solid #656565;
+}
+#main 
+{
+font-size: 1.05em;
+padding:3%;
+}
+	#main .article
+	{
+		max-width:800px;
+		margin:auto;
+		margin-top: 30px;
+	}
+
+#source 
+{
+font-size: 1.1em;
+line-height: 110%;
+margin-bottom: 15px;
+margin-top: 20px;
+}
+
+#tag
+{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+margin-top:30px;
+margin-bottom: 30px;
+}
+  #tag li
+{
+	background-color: #509fff;
+	margin-left: 10px;
+	color: white;
+	margin-top:5px;
+	margin-bottom: 5px;
+	padding: 5px 5px;
+	font-family: "QuattrocentoRoman", serif;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+  #tag li:hover
+{
+	background-color: #0828a7;
+}
+
+ .bouton
+{
+	margin-top: 15px;
+}
+
+blockquote
+{
+	font-family: "QuattrocentoSans", arial, sans;
+	font-size : 1.3em;
+	color : #4c4c4c;
+	font-style: italic;
+	text-align: justify;
+	font-weight: bold;
+	letter-spacing: 0.02em;
+	word-spacing: 0.04em;
+	border-left: 3px solid #4c4c4c;
+	padding-left : 3em;
+	margin-top:25px;
+	margin-bottom: 25px;
+	line-height: 125%;
+}
+
+/*apprendre-à-coder intro stylisée*/
+.intro-stylise
+{
+	margin-bottom : 100px;
+	line-height: 150%;
+	text-align: justify;
+}
+  .quattroSerif
+  {
+		font-family: "QuattrocentoRoman", serif;
+		letter-spacing: 0.15em
+  }
+  .petite-ombre
+{
+	text-shadow: 0.5px 0.5px 1px;
+}
+.tiret
+{
+	letter-spacing: -4px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.scintillant 
+{
+	animation-name:scintillant;
+	animation-duration: 3.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out; 
+}
+@keyframes scintillant
+{
+	0% {filter:hue-rotate(0deg);}
+	25% {filter:hue-rotate(90deg);}
+	50% {filter:hue-rotate(180deg);}
+	75% {filter:hue-rotate(270deg);}
+	100% {filter:hue-rotate(360deg)}
+}
+
+.fade-in
+{
+	animation:fade-in 1.25s ease-in-out;
+	-webkit-animation : fade-in 1.25s ease-in-out;
+	-moz-animation: fade-in 1.25s ease-in-out;
+}
+
+.article h1
+{
+	font-family: "QuattrocentoRoman", serif;
+	font-size: 1.5em;
+	margin-bottom: 15px;
+	margin-top : 45px;
+	letter-spacing: 0.04em;
+	font-weight: bold;
+}
+
+
+@media screen and (max-width: 500px), screen and (max-device-width:480px)
+{
+.principal
+	{
+		font-size: 2.2em;
+		text-align: justify;
+	}
+
+#inner p  /*texte plus petit*/
+	{
+		font-size: 1.1em;
+	}
+
+figure[class="texte"]
+	{
+		font-size: 1.1em;
+	}
+	
+figure[class="image-intro"]
+	{
+		margin:auto;
+		justify-content: center;
+		align-content: center;
+		width:100%;
+	}
+
+
+figure[class="image-intro"] img[class="format-portrait"] /* img principale format portait*/
+{
+		max-height : 100vw;
+		width: 100%;
+		object-fit: contain;
+	}
+  figure[class="image-intro"] figcaption
+	{
+		margin-bottom: 25px;
+	}
+
+
+}
