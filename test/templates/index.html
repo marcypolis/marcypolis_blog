@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Liste d'articles</h2>
+    <ul>
+    {% for page in pages %}
+        <li>
+            <a href="{{ url_for("page", chemin=page.path)  }}">{{ page.titre  }} - {{ page.soustitre }}</a>
+        </li>
+	</br>
+    {% else %}
+        <li>Rien</li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
