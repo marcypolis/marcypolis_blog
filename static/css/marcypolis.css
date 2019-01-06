@@ -3,74 +3,74 @@
 @font-face {
 	/*logo*/
     font-family: 'amatic_scregular';
-    src: url('police/amaticsc-regular-webfont.eot');
-    src: url('police/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('police/amaticsc-regular-webfont.woff2') format('woff2'),
-         url('police/amaticsc-regular-webfont.woff') format('woff'),
-         url('police/amaticsc-regular-webfont.ttf') format('truetype'),
-         url('police/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+    src: url('../police/amaticsc-regular-webfont.eot');
+    src: url('../police/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../police/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('../police/amaticsc-regular-webfont.woff') format('woff'),
+         url('../police/amaticsc-regular-webfont.ttf') format('truetype'),
+         url('../police/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
     font-weight: normal;
     font-style: normal;}
 @font-face {
 	/*logo*/
     font-family: 'amaticbold';
-    src: url('police/amatic-bold-webfont.eot');
-    src: url('police/amatic-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('police/amatic-bold-webfont.woff2') format('woff2'),
-         url('police/amatic-bold-webfont.woff') format('woff'),
-         url('police/amatic-bold-webfont.ttf') format('truetype'),
-         url('police/amatic-bold-webfont.svg#amaticbold') format('svg');
+    src: url('../police/amatic-bold-webfont.eot');
+    src: url('../police/amatic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../police/amatic-bold-webfont.woff2') format('woff2'),
+         url('../police/amatic-bold-webfont.woff') format('woff'),
+         url('../police/amatic-bold-webfont.ttf') format('truetype'),
+         url('../police/amatic-bold-webfont.svg#amaticbold') format('svg');
     font-weight: bold;
     font-style: normal;}
 @font-face {
 	/*article:titre*/
 	font-family: 'QuattrocentoRoman';
-	src:url('police/QuattrocentoRoman.eot');
-	src:url('police/QuattrocentoRoman.eot?#iefix') format('embedded-opentype'),
-		url('police/QuattrocentoRoman.ttf') format('truetype'),
-		url('police/QuattrocentoRoman.woff') format('woff'),
-		url('police/QuattrocentoRoman.woff2') format('woff2');    
+	src:url('../police/QuattrocentoRoman.eot');
+	src:url('../police/QuattrocentoRoman.eot?#iefix') format('embedded-opentype'),
+		url('../police/QuattrocentoRoman.ttf') format('truetype'),
+		url('../police/QuattrocentoRoman.woff') format('woff'),
+		url('../police/QuattrocentoRoman.woff2') format('woff2');    
 	font-weight: normal;
     font-style: normal;}
 @font-face {
 	/*article:sous-titre, contenu*/
 	font-family: 'QuattrocentoSans';
-	src:url('police/QuattrocentoSans.eot');
-	src:url('police/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
-		url('police/QuattrocentoSans-Regular.otf') format('opentype'),
-		url('police/QuattrocentoSans.ttf') format('truetype'),
-		url('police/QuattrocentoSans.woff') format('woff'),
-		url('police/QuattrocentoSans.woff2') format('woff2');    
+	src:url('../police/QuattrocentoSans.eot');
+	src:url('../police/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
+		url('../police/QuattrocentoSans-Regular.otf') format('opentype'),
+		url('../police/QuattrocentoSans.ttf') format('truetype'),
+		url('../police/QuattrocentoSans.woff') format('woff'),
+		url('../police/QuattrocentoSans.woff2') format('woff2');    
 	font-weight: normal;
     font-style: normal;}
 @font-face {
 	/*article:sous-titre, contenu*/
 	font-family: 'QuattrocentoSans';
-	src:url('police/QuattrocentoSans-Bold.eot');
-	src:url('police/QuattrocentoSans-Bold.eot?#iefix') format('embedded-opentype'),
-		url('police/QuattrocentoSans-Bold.ttf') format('truetype'),
-		url('police/QuattrocentoSans-Bold.woff') format('woff'),
-		url('police/QuattrocentoSans-Bold.woff2') format('woff2');
+	src:url('../police/QuattrocentoSans-Bold.eot');
+	src:url('../police/QuattrocentoSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../police/QuattrocentoSans-Bold.ttf') format('truetype'),
+		url('../police/QuattrocentoSans-Bold.woff') format('woff'),
+		url('../police/QuattrocentoSans-Bold.woff2') format('woff2');
 	font-weight: bold;
     font-style: normal;}
 @font-face {
 	/*article:sous-titre, contenu*/
 	font-family: 'QuattrocentoSans';
-	src:url('police/QuattrocentoSans-Italic.eot');
-	src:url('police/QuattrocentoSans-Italic.eot?#iefix') format('embedded-opentype'),
-		url('police/QuattrocentoSans-Italic.ttf') format('truetype'),
-		url('police/QuattrocentoSans-Italic.woff') format('woff'),
-		url('police/QuattrocentoSans-Italic.woff2') format('woff2');
+	src:url('../police/QuattrocentoSans-Italic.eot');
+	src:url('../police/QuattrocentoSans-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../police/QuattrocentoSans-Italic.ttf') format('truetype'),
+		url('../police/QuattrocentoSans-Italic.woff') format('woff'),
+		url('../police/QuattrocentoSans-Italic.woff2') format('woff2');
 	font-weight: normal;
     font-style: italic;}		
 @font-face {
 	/*article:sous-titre, contenu*/
 	font-family: 'QuattrocentoSans';
-	src:url('police/QuattrocentoSans-BoldItalic.eot');
-	src:url('police/QuattrocentoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
-		url('police/QuattrocentoSans-BoldItalic.ttf') format('truetype'),
-		url('police/QuattrocentoSans-BoldItalic.woff') format('woff'),
-		url('police/QuattrocentoSans-Bold.woff2') format('woff2');
+	src:url('../police/QuattrocentoSans-BoldItalic.eot');
+	src:url('../police/QuattrocentoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../police/QuattrocentoSans-BoldItalic.ttf') format('truetype'),
+		url('../police/QuattrocentoSans-BoldItalic.woff') format('woff'),
+		url('../police/QuattrocentoSans-Bold.woff2') format('woff2');
 		font-weight: bold;
     font-style: italic;}
 
@@ -137,7 +137,7 @@ ul, li
 
 .hover-reveal
 {
-	background-image: url('image/gif/glitter.gif');
+	background-image: url('../img/gif/glitter.gif');
 	background-repeat: repeat-x;
 	background-size: auto 100%;
 	position: relative;
@@ -183,7 +183,7 @@ ul, li
 {
 	display:block;
 	margin:auto;
-	background-image:url('image/bleu.jpg');
+	background-image:url('../img/bleu.jpg');
 	background-repeat: no-repeat;
 	background-size:cover  ;
 	padding: 2%;
@@ -245,17 +245,17 @@ ul, li
 	
 		.icon-youtube
 		{
-		background-image: url('image/icon-youtube.svg');
+		background-image: url('../img/icon-youtube.svg');
 		}
 
 		.icon-instagram
 		{
-			background-image: url('image/icon-instagram.svg');
+			background-image: url('../img/icon-instagram.svg');
 		}
 
 		.icon-facebook
 		{
-			background-image:url('image/icon-facebook.svg');
+			background-image:url('../img/icon-facebook.svg');
 		}
 .logo
 {

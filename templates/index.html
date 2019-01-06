@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+<!--CSS specific-->
+{% block specific_css %}
+<link rel="stylesheet" href="{{ url_for("static", filename="css/accueil.css") }}">
+{% endblock specific_css %}
+
+<!--Head title-->
+{% block headtitle %}
+<title>Marcypolis - accueil</title>
+{% endblock headtitle %}
+
+<!--<body> main div-->
+{% block maincontent %}
+<!--LIEN IMAGE à vérifier!-->
+
+    <section id="main">
+        <div class="inner">
+            <div id="article">
+                {% for page in pages %}
+                   <article class="nouveau-post">
+                        <a href="{{ url_for("page", chemin=page.path)  }}">
+                            <img src="{{ url_for('static', filename=page.image) }}" alt="collage art">
+                            <h2>{{ page.titre }}</h2>
+                            <div class="description">
+                                <p>{{ page.soustitre|safe }}</p>
+                            </div>
+                        </a>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+ 
+{% endblock maincontent %}

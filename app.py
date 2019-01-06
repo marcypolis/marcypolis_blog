@@ -14,25 +14,29 @@ pages = FlatPages(app)
 
 freezer = Freezer(app)
 
-
-
-
-
+#dictionnaire URL externe (liens sociaux)
+ext_urls= {
+	'youtube' : "https://www.youtube.com/channel/UCwJfS8Tbh1Pw7FUWVlSOh3A",
+	'instagram' : "https://www.instagram.com/marcypolis"
+}
 
 @app.route('/')
 def index():
-    return render_template('index.html', pages=pages)
+    return render_template('index.html', pages=pages, ext_urls=ext_urls)
 
+@app.route('/je-suis/')
+def je_suis():
+    return render_template('index.html', pages=pages, ext_urls=ext_urls)
 
 @app.route('/<path:chemin>/')
 #chemin = 'hello/'
 def page(chemin):
     ret = pages.get_or_404(chemin)
-    print("titre", ret['titre'])
+    print("building : ", ret['titre'])
     if chemin == 'hello':
         return ret.html
     else:
-        return render_template('page.html', page=ret)
+        return render_template('page.html', page=ret, ext_urls=ext_urls)
 
 
 

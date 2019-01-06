@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'QuattrocentoSans';
-  src:url('police/QuattrocentoSans.eot');
-  src:url('police/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
-    url('police/QuattrocentoSans-Regular.otf') format('opentype'),
-    url('police/QuattrocentoSans.ttf') format('truetype'),
-    url('police/QuattrocentoSans.woff') format('woff'),
-    url('police/QuattrocentoSans.woff2') format('woff2');    
+  src:url('../police/QuattrocentoSans.eot');
+  src:url('../police/QuattrocentoSans.eot?#iefix') format('embedded-opentype'),
+    url('../police/QuattrocentoSans-Regular.otf') format('opentype'),
+    url('../police/QuattrocentoSans.ttf') format('truetype'),
+    url('../police/QuattrocentoSans.woff') format('woff'),
+    url('../police/QuattrocentoSans.woff2') format('woff2');    
   font-weight: normal;
   font-style: normal;}
 
@@ -55,7 +55,7 @@ ul, li
 {
   display:block;
   margin:auto;
-  background-image:url('image/bleu.jpg');
+  background-image:url('../img/bleu.jpg');
   background-repeat: no-repeat;
   background-size:cover;
   padding: 2% 2%;
@@ -116,7 +116,7 @@ span[class="border"]
 
 .hover-reveal
 {
-	background-image: url('image/gif/glitter.gif');
+	background-image: url('../img/gif/glitter.gif');
 	background-repeat: repeat-x;
 	background-size: auto 100%;
 	position: relative;
