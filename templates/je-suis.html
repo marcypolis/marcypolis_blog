@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block specific_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/je-suis.css') }}">
+{% endblock specific_css %}
+
+{% block headtitle %}
+Je suis - Marcypolis
+{% endblock headtitle %}
+
+
+{% block maincontent %}
+<div id="main">
+	<div id="inner">
+		<section class="txtgris-espace centre">
+		<h1 class="titreseul"><span class="flashborder">Je suis?</span></h1>
+		<p> Je ne sais pas encore comment me référencer sur internet.<br>
+		Donc si tu es là, peut-être que tu me connais déjà.<br>
+		Sinon, on se dit à bientôt? Le temps de <span class="hover-reveal youpi">pimper</span> un peu la page.<br>
+		Des bisous.</p>
+		</section>
+		<div class="bouton">
+		<a href="{{ url_for('contact') }}">
+			<button class="ecris-moi">ecris-moi</button>
+		</a>
+		</div>
+	</div>
+</div>
+{% endblock maincontent %}

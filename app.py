@@ -22,28 +22,28 @@ ext_urls= {
 
 @app.route('/')
 def index():
-    return render_template('index.html', pages=pages, ext_urls=ext_urls)
+    latest = sorted(pages, reverse=True,
+                    key=lambda page: page.meta['date'])
+    return render_template('index.html', pages=latest, ext_urls=ext_urls)
 
-@app.route('/je-suis/')
+@app.route('/contact/')
+def contact():
+    return render_template('contact.html', ext_urls=ext_urls)
+
+@app.route('/je-suifemmes-multitachess/')
 def je_suis():
-    return render_template('index.html', pages=pages, ext_urls=ext_urls)
+    return render_template('je-suis.html', ext_urls=ext_urls)
 
 @app.route('/<path:chemin>/')
 #chemin = 'hello/'
 def page(chemin):
     ret = pages.get_or_404(chemin)
     print("building : ", ret['titre'])
-    if chemin == 'hello':
+    if chemin == 'HTMLonly':
         return ret.html
     else:
         return render_template('page.html', page=ret, ext_urls=ext_urls)
 
-
-
-
-
-
-
 if __name__ == '__main__':
-    #app.run(port=8000)
-    freezer.freeze()
+    app.run(port=8000)
+    #freezer.freeze()

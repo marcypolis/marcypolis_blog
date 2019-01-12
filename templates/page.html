@@ -7,43 +7,70 @@
 
 <!--titre head = titre de l'article + - Marcypolis-->
 {% block headtitle %}
-	<title>{{ page.titre}} - Marcypolis</title>
+{{ page.titre}} - Marcypolis
 {% endblock headtitle %}
 
 {% block maincontent %}
 	<div id="main">
 
 		<div id="inner">
-		<!--différent modèle de titre : format portrait, format paysage ou vierge-->
+		<!--1=portrait//2=paysage//3=titre seul//0=rien-->
 			{% if page.portrait==1 %}
 				<section class="titre format-portrait">
 					<div class="titre-texte">
-						<h1 class="principal">{{ page.titre }}</h1>
+						{% if page.titre_page %}
+							<h1 class="principal">{{ page.titre_page|safe }}</h1>
+						{% else %}
+							<h1 class="principal">{{ page.titre|safe }}</h1>
+						{% endif %}
 						{% if page.soustitre_page %}
 							<h2 class="sous-titre">{{ page.soustitre_page|safe }}</h2>
 						{% else %}
 							<h2 class="sous-titre">{{ page.soustitre|safe }}</h2>
 						{% endif %}
-						<div class="date">{{ page.date }}</div>
+						<div class="date">{{ page.date_string }}</div>
 					</div>
 					<figure class="image-intro">
 						<img src="{{ url_for('static', filename=page.image) }}" alt="collage art">
 						<figcaption class="image-intro">collage by <a href="{{ url_for('je_suis') }}" class="lien-couleur rouge">me</a></figcaption>
 					</figure>
 				</section>
-			{% elif page.portrait==0 %} 
+			{% elif page.portrait==2 %} 
 				<section class="titre format-paysage">
 					<div class="titre-texte">
-						<h1 class="principal">{{ page.titre }}</h1>
-						<h2 class="sous-titre">{{ page.soustitre }}</h2>
-						<div class="date">{{ page.date }}</div>
+						{% if page.titre_page %}
+							<h1 class="principal">{{ page.titre_page|safe }}</h1>
+						{% else %}
+							<h1 class="principal">{{ page.titre|safe }}</h1>
+						{% endif %}
+						{% if page.soustitre_page %}
+							<h2 class="sous-titre">{{ page.soustitre_page|safe }}</h2>
+						{% else %}
+							<h2 class="sous-titre">{{ page.soustitre|safe }}</h2>
+						{% endif %}
+						<div class="date">{{ page.date_string }}</div>
 					</div>
 					<figure class="image-intro">
 						<img src="{{ url_for('static', filename=page.image) }}" alt="collage art">
 						<figcaption class="image-intro">collage by <a href="{{ url_for('je_suis') }}" class="lien-couleur rouge">me</a></figcaption>
 					</figure>
 				</section>
-
+			{% elif page.portrait==3 %}
+				<section class="titre format-paysage">
+					<div class="titre-texte">
+						{% if page.titre_page %}
+							<h1 class="principal">{{ page.titre_page|safe }}</h1>
+						{% else %}
+							<h1 class="principal">{{ page.titre|safe }}</h1>
+						{% endif %}
+						{% if page.soustitre_page %}
+							<h2 class="sous-titre">{{ page.soustitre_page|safe }}</h2>
+						{% else %}
+							<h2 class="sous-titre">{{ page.soustitre|safe }}</h2>
+						{% endif %}
+						<div class="date">{{ page.date_string }}</div>
+					</div>
+				</section>
 			{% endif %}
 			
 			<!--contenu de l'article code HTML externalisé. Tag compris-->
@@ -57,11 +84,10 @@
 				{% for tag in page.tags %}
 					<li><a href="#"></a>{{tag}}</li>
 				{% endfor %}
-
 			</div>
 
 			<div class="bouton">
-				<a href="contact.html">
+				<a href="{{ url_for('contact') }}">
 					<button class="ecris-moi">ecris-moi</button>
 				</a>
 			</div>
