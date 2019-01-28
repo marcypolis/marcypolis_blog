@@ -17,8 +17,7 @@
 	font-weight: bold;
 	letter-spacing: 0.04em;
 }
-.sous-titre
-{
+.sous-titre {
 	letter-spacing: 0.04em;
 	font-size:1.5em;
 	line-height: 120%;
@@ -250,6 +249,8 @@ blockquote
 	margin-bottom : 100px;
 	line-height: 150%;
 	text-align: justify;
+	overflow: hidden;
+	height: 6em;
 }
   .quattroSerif
   {
@@ -265,22 +266,6 @@ blockquote
 	letter-spacing: -4px;
 	font-weight: bold;
 	display: inline-block;
-}
-
-.scintillant 
-{
-	animation-name:scintillant;
-	animation-duration: 3.5s;
-	animation-iteration-count: infinite;
-	animation-timing-function:ease-in-out; 
-}
-@keyframes scintillant
-{
-	0% {filter:hue-rotate(0deg);}
-	25% {filter:hue-rotate(90deg);}
-	50% {filter:hue-rotate(180deg);}
-	75% {filter:hue-rotate(270deg);}
-	100% {filter:hue-rotate(360deg)}
 }
 
 .fade-in
@@ -303,15 +288,31 @@ blockquote
 
 @media screen and (max-width: 500px), screen and (max-device-width:480px)
 {
+
+
 .principal
 	{
 		font-size: 2.2em;
 		text-align: justify;
 	}
 
+blockquote {
+	letter-spacing: 0.1em;
+	padding-left: 1.05em;}
+
+.intro-stylise {
+    margin-bottom: 20px;
+	line-height: 120%;
+	height: 6em;
+
+}
+
 #inner p  /*texte plus petit*/
 	{
 		font-size: 1.1em;
+		overflow: normal;
+		white-space: normal;
+
 	}
 
 figure[class="texte"]

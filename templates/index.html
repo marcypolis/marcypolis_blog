@@ -16,6 +16,8 @@ Marcypolis - accueil
 
     <section id="main">
         <div class="inner">
+            {% block tagpage %}
+            {% endblock tagpage %}
             <div id="article">
                 {% for page in pages %}
                    <article class="nouveau-post">

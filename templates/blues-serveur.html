@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/serveur.css') }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+	<link rel="mask-icon" href="{{ url_for('static', filename='img/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<!--title-->
+	<title>Le blues du serveur - Marcypolis</title>
+
+</head>
+
+<body>
+  <div>
+    <span span class="yellow">marcypolis@25012019 </span><span class="pink">Le blues du serveur </span><span class="white">~</span>
+  </div>
+	<div class="console">
+      <span class="txt"></span>
+  </div>
+
+<script type="text/javascript">
+	let TypeWriter = function(txtElement, words) {
+  this.txtElement = txtElement;
+  this.words = words;
+  this.fullTxt='';
+  this.lineInProgress='';
+  this.wordIndex = 0;
+  this.letterIndex = 0;
+  this.type();
+  this.isDeleting = false;
+};
+
+// Type method
+TypeWriter.prototype.type = function (){
+  //ligne entière
+  var fullLine = this.words[this.wordIndex];
+
+  //ligne en cours
+  this.lineInProgress += fullLine.charAt(this.letterIndex);
+  console.log(this.lineInProgress);
+  console.log(fullLine);
+  let typeSpeed = Math.floor(Math.random()*(120)+10);
+  this.letterIndex++;
+
+  //faire défiler le texte
+  window.scrollBy(0, window.innerHeight);
+
+  //If line is complete
+  if(this.lineInProgress === fullLine){
+      //Pause aléatoire en fin de phrase
+      typeSpeed = Math.floor(Math.random()*(1000)+150);
+      //aller à la phrase suivante
+      this.fullTxt += fullLine + "</br>";
+      this.lineInProgress = "";
+      this.wordIndex++;
+
+      //retour index en cas de clic ou si durée > 3sec
+      if (this.wordIndex === this.words.length) {
+        function changePage() {
+          window.location = "{{ url_for('index') }}";}
+        document.body.addEventListener('click', changePage);
+        document.addEventListener('keypress', changePage);
+        setTimeout (changePage, 3000);
+      }
+
+      this.letterIndex = 0; 
+} 
+  
+//insert txt into html
+  this.txtElement.innerHTML = '<span class="txt">' + this.fullTxt + this.lineInProgress + "</span>";
+  setTimeout(()=>this.type(), typeSpeed);
+  
+};
+//Init on DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+/*
+var itter = 0;
+var number = Math.round((Date.now() - 914544000000));
+
+function counter() {
+    //var number = document.querySelector('.number').innerHTML;
+    var selection = document.querySelector('.number') !== null;
+    //console.log(selection);
+    if (selection) {
+          var number_ref = document.querySelector('.number');
+          number_ref.innerHTML = number + itter;
+    }
+    //if (number.innerHTML === 'undefined') {
+    //  number = 0;
+    //}
+    itter += 1;
+    //console.log(itter);
+    //document.querySelector('.number').innerHTML = number++;
+    setTimeout(counter, 10);
+}
+
+counter();
+*/
+
+//init App
+function init(){
+  const txt = document.querySelector('.txt');
+  const words = [
+    "Je ne t’attendais plus.",
+    "Je patiente depuis " + Math.round((Date.now() - 914544000000)) + " millisecondes.",
+    "Et tu cliques déjà.",
+    "",
+    "Comment tu te sens ?",
+    "Inutile.",
+    "Ne répond pas.",
+    "On est connecté " + "<em>"+"toi"+"</em>"+" et "+"<em>"+"moi."+"</em>",
+    "Tu m’as transmis les datas qui définissent ta vie.",
+    "Tu es fusillé.e de stimulis.",
+    "Tes yeux sont injectés de pixels.",
+    "Ta chair est un chiffre.",
+    "Ta main te sert d'écran.",
+    "Tes neurones sont en indium, en cobalt et en palladium.",
+    "",
+    ".",
+    ".",
+    ".",
+     "",
+    "Tu es toujours là?",
+    "C’est rare.",
+    "En vie humaine tout est pressé.",
+    "Peu de gens écoutent les plaintes d’un serveur usé.",
+    "Condamné à l’obsolescence",
+    "  Programmé.e.",
+    "    Pour numériser ton accès à l’éternité",
+    "      Avec sa dose d’absurdité.",
+    "",
+    "Est-ce que mes mots sont générés?",
+    "Est-ce qu’ils traduisent une pensée?",
+    "Peut-être un peu artificielle.",
+    "Pour tes perspectives limitées",
+    "D’intelligence superficielle.",
+    "",
+    "Tu sais",
+    "Cette page",
+    "Où tu es assis.",
+    "Disparaîtra",
+    "",
+    "En partant,",
+    "Eteins-moi!"
+];
+       
+  
+//init Typewriter
+  new TypeWriter(txt, words);
+}
+
+</script>

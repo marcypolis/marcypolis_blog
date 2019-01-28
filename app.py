@@ -26,11 +26,25 @@ def index():
                     key=lambda page: page.meta['date'])
     return render_template('index.html', pages=latest, ext_urls=ext_urls)
 
+@app.route('/tag/<string:tagname>/')
+def tag(tagname):
+    # créer une liste de pages
+    tagged = []
+    # parcourir pages
+    for page in pages: 
+        # pour chaque page : parcourir tags
+        # trouver tags identiques à tagname
+        if tagname in page['tags']:
+            tagged.append(page)
+    latest = sorted(tagged, reverse=True,
+                    key=lambda page:page.meta['date'])
+    return render_template('tag.html', pages=latest, tagname=tagname, ext_urls=ext_urls)
+
 @app.route('/contact/')
 def contact():
     return render_template('contact.html', ext_urls=ext_urls)
 
-@app.route('/je-suifemmes-multitachess/')
+@app.route('/je-suis/')
 def je_suis():
     return render_template('je-suis.html', ext_urls=ext_urls)
 
@@ -39,8 +53,8 @@ def je_suis():
 def page(chemin):
     ret = pages.get_or_404(chemin)
     print("building : ", ret['titre'])
-    if chemin == 'HTMLonly':
-        return ret.html
+    if chemin == 'blues-serveur' : 
+        return render_template('blues-serveur.html')
     else:
         return render_template('page.html', page=ret, ext_urls=ext_urls)
 

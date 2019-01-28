@@ -80,9 +80,8 @@
 
 			<div id="tag" class="clear-float-right">
 				<ul class="replacetext">tag</ul>
-
 				{% for tag in page.tags %}
-					<li><a href="#"></a>{{tag}}</li>
+					<li><a href="{{ url_for('tag', tagname=tag) }}">{{tag}}</a></li>
 				{% endfor %}
 			</div>
 

@@ -225,6 +225,9 @@ span[class="flashborder"]
   -moz-animation-iteration-count: infinite;
 }
 
+span[class="flashtext"] {
+ 	color: 
+ }
 /* aspect global */
 .mobile-only
 	{
@@ -429,15 +432,12 @@ span[class="flashborder"]
 	z-index: 0;
 }
 
-.popup .show 
-{
+.popup .show {
     visibility: visible;
     -webkit-animation: fade-in 0.3s ease-in-out;
-    animation: fade-in 0.3s ease-in-out;
-}
+    animation: fade-in 0.3s ease-in-out; }
 	/*pop-up flèche*/
-	.popup .popuptext::after
-	{
+	.popup .popuptext::after {
 		content: "";
 	    position: absolute;
 	    top: 100%;
@@ -445,8 +445,7 @@ span[class="flashborder"]
 	    margin-left: -5px;
 	    border-width: 5px;
 	    border-style: solid;
-	    border-color: #656565 transparent transparent transparent;
-	}
+	    border-color: #656565 transparent transparent transparent;}
 
 /*--------------------Animation--------------------*/
 .fade-in {
@@ -460,7 +459,7 @@ span[class="flashborder"]
 	from{opacity:0;}
 	to{opacity: 1;}}
 
-/* changement de couleur  scintillant */
+/* changement de couleur scintillant */
 	@keyframes flash {
 		0% {border-color: red;}
 		25% {border-color: #082eac;}
@@ -495,7 +494,8 @@ span[class="flashborder"]
     font: inherit;
     font-size: inherit;
     cursor: default;
-    position:relative; }
+    position:relative;
+    z-index: 6; }
 	.hover-reveal:hover:after {
 		content: inherit;
 		object-fit: cover;
@@ -511,6 +511,9 @@ span[class="flashborder"]
 		.hover-reveal.yes:hover::after
 		{
 			content: url("https://media.giphy.com/media/l1J9CyLu4JMV95Xyg/giphy-downsized.gif");
+			position: absolute;
+				left:40px;
+				top:-20px; 
 		}
 		.hover-reveal.koons:hover::after
 		{
@@ -524,10 +527,23 @@ span[class="flashborder"]
 	    content: url('https://media.giphy.com/media/3ePeApZEjyINeWGVGc/giphy.gif');
 	  	}
 
+.scintillant {
+	animation-name:scintillant;
+	animation-duration: 3.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out; }
+
+@keyframes scintillant {
+	0% {filter:hue-rotate(0deg);}
+	25% {filter:hue-rotate(90deg);}
+	50% {filter:hue-rotate(180deg);}
+	75% {filter:hue-rotate(270deg);}
+	100% {filter:hue-rotate(360deg)}}
+
 /*MOBILE*/
 @media screen and (max-device-width:480px), screen and (max-width:500px)
 {
-	.mobile-only{display: inline-block;}
+	.mobile-only{display: flex;}
 	
 	.not-on-mobile{display: none;}
 
@@ -555,7 +571,7 @@ span[class="flashborder"]
 		margin:auto;
 		background-image:none;
 		padding: none;
-		height: 100vh;
+		/*height: 100vh;*/
 	}
 	
 	.inner
@@ -564,6 +580,9 @@ span[class="flashborder"]
 		padding:5px;
 	}
 
+	#header {
+		font-size: 1em;
+	}
 	#header .inner
 	{
 		display: flex;
@@ -580,4 +599,11 @@ span[class="flashborder"]
 {
 	margin: 0;
 }
+
+		.hover-reveal.yes:hover::after
+		{
+			position: absolute;
+				left:-170px;
+				top:-10px; 
+		}
 }
