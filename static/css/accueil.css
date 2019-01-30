@@ -54,30 +54,26 @@
 	{
 		display: none;
 	}
-	#article
-	{
-		/*flex-direction: column;*/
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		align-content: center;
-		justify-content: center;
+	
+	.lien-article {
+		width:100%;
 	}
-	.nouveau-post
-	{
-	margin-bottom: 20px;
-	padding: 0px;
-	width: 100%;
-	margin-top:0px;
-	margin-left: 0px;
-	margin-right: 0px;
+	
+	.nouveau-post {
+		width:100%;
+		margin-bottom: 10px;
 	}
-		.nouveau-post img
-		{
-			max-width: 100%;
-			min-width:100%;
-			height: auto;
-			max-height: 280px;
-			object-fit: cover;
-		}
+	.nouveau-post img {
+		max-width: 100%;
+		min-width:100%;
+		height: 300px;
+		/*! max-height:300px; */
+		/*! object-fit: cover; */}
+
+	#article h2 {
+		/*! font-size: 2.5em; */}
+
+	.description {
+		font-size:1.1em;}
+
 }

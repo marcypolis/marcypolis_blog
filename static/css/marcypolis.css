@@ -548,57 +548,40 @@ span[class="flashtext"] {
 	.not-on-mobile{display: none;}
 
 	#form { 
-	width:100%;
-	min-width: inherit;  
-	}
+	width:80%;
+	min-width: inherit;}
 
-  	#submit {
-  	width: 80%;
-	}
+  	#submit { width: 80%;}
 
-	.savoir-plus
-	{
+	.savoir-plus {
 		text-align: center;
-		margin-right: 20px;
-	}
+		margin-right: 20px;}
 
-	.ecris-moi
-	{
-		width: 90%;
-	}
-	#wrapper
-	{
+	.ecris-moi {
+		width: 90%;}
+	#wrapper {
 		margin:auto;
 		background-image:none;
 		padding: none;
-		/*height: 100vh;*/
-	}
+		/*height: 100vh;*/}
 	
-	.inner
-	{
+	.inner {
 		margin:auto;
-		padding:5px;
-	}
+		padding:5px;}
 
 	#header {
-		font-size: 1em;
-	}
-	#header .inner
-	{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		margin: 15px;
-		height: 90px;
-	}
-		#header .logo
-		{
-			font-size: 6em;
-		}
-	#main #inner
-{
-	margin: 0;
-}
+		font-size: 1.5em;
+		height:190px;}
+
+		#header .inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;}
+
+		#header .logo {
+			font-size: 5em;}
+			
+	#main #inner {margin: 0;}
 
 		.hover-reveal.yes:hover::after
 		{

@@ -59,5 +59,5 @@ def page(chemin):
         return render_template('page.html', page=ret, ext_urls=ext_urls)
 
 if __name__ == '__main__':
-    app.run(port=8000)
-    #freezer.freeze()
+    #app.run(port=8000)
+    freezer.freeze()

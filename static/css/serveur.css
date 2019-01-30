@@ -1,4 +1,4 @@
-.console{
+.console {
   color: lime;
   text-shadow: 0px 0px 0.1em limegreen, 0px 0px 0.1em green;
   margin-top: 30px;
@@ -45,7 +45,7 @@ span .txt {
 	border-right: 0.05em solid lime;
 	white-space: pre;
 	/*overflow: hidden;*/
-  margin-top: 0;
+  margin-top: 0px;
 	-webkit-animation: blink-caret 0.7s infinite;
   -moz-transition: blink-caret 0.7s infinite;
   -ms-transition: blink-caret 0.7s infinite;
@@ -57,4 +57,8 @@ span .txt {
 span .txt {
   white-space: normal;
   overflow: auto;
+  border-right: 0.08em solid lime
+    -webkit-animation: blink-caret 0.8s infinite;
+  -moz-transition: blink-caret 0.8s infinite;
+  -ms-transition: blink-caret 0.8s infinite;
 }

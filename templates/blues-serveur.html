@@ -59,6 +59,8 @@ TypeWriter.prototype.type = function (){
       this.lineInProgress = "";
       this.wordIndex++;
 
+      this.letterIndex = 0; 
+
       //retour index en cas de clic ou si durée > 3sec
       if (this.wordIndex === this.words.length) {
         function changePage() {
@@ -68,7 +70,6 @@ TypeWriter.prototype.type = function (){
         setTimeout (changePage, 3000);
       }
 
-      this.letterIndex = 0; 
 } 
   
 //insert txt into html

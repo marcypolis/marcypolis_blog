@@ -21,7 +21,7 @@ Marcypolis - accueil
             <div id="article">
                 {% for page in pages %}
                    <article class="nouveau-post">
-                        <a href="{{ url_for("page", chemin=page.path)  }}">
+                        <a class="lien-article" href="{{ url_for("page", chemin=page.path)  }}">
                             <img src="{{ url_for('static', filename=page.image) }}" alt="collage art">
                             <h2>{{ page.titre }}</h2>
                             <div class="description">
