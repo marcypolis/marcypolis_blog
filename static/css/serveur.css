@@ -54,10 +54,11 @@ span .txt {
 @media screen and (max-device-width:480px), screen and (max-width:500px)
 {
 
+body {font-size: 1.1em;}
 span .txt {
   white-space: normal;
   overflow: auto;
-  border-right: 0.08em solid lime
+  border-right: 0.07em solid lime
     -webkit-animation: blink-caret 0.8s infinite;
   -moz-transition: blink-caret 0.8s infinite;
   -ms-transition: blink-caret 0.8s infinite;

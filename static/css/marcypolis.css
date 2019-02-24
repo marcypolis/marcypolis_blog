@@ -504,10 +504,8 @@ span[class="flashtext"] {
 			left:20px;
 			top:20px; }
 
-		.hover-reveal.wtf:hover:after
-		{
-			content: url("https://media.giphy.com/media/LPdUmwrsRFAli/giphy.gif");
-		}
+		.hover-reveal.wtf:hover:after{
+			content: url("https://media.giphy.com/media/LPdUmwrsRFAli/giphy.gif");}
 		.hover-reveal.yes:hover::after
 		{
 			content: url("https://media.giphy.com/media/l1J9CyLu4JMV95Xyg/giphy-downsized.gif");
@@ -527,6 +525,11 @@ span[class="flashtext"] {
 	    content: url('https://media.giphy.com/media/3ePeApZEjyINeWGVGc/giphy.gif');
 	  	}
 
+	  	.hover-reveal.fire:hover:after {
+	  		content: url('https://media.giphy.com/media/xXvIkTu08XQLC/giphy.gif'); }
+	  	.hover-reveal.greenyeah:hover:after {
+	  		content: url('https://media.giphy.com/media/3octxenaCzu7hdbr74/giphy.gif');
+	  	}	  	
 .scintillant {
 	animation-name:scintillant;
 	animation-duration: 3.5s;
@@ -540,8 +543,8 @@ span[class="flashtext"] {
 	75% {filter:hue-rotate(270deg);}
 	100% {filter:hue-rotate(360deg)}}
 
-/*MOBILE*/
-@media screen and (max-device-width:480px), screen and (max-width:500px)
+/*RESPONSIVE*/
+@media screen and (max-width:500px)
 {
 	.mobile-only{display: flex;}
 	
@@ -558,7 +561,9 @@ span[class="flashtext"] {
 		margin-right: 20px;}
 
 	.ecris-moi {
-		width: 90%;}
+		width: auto;
+		font-size: 1.5em;
+		}
 	#wrapper {
 		margin:auto;
 		background-image:none;
@@ -570,8 +575,7 @@ span[class="flashtext"] {
 		padding:5px;}
 
 	#header {
-		font-size: 1.5em;
-		height:190px;}
+		height: auto;}
 
 		#header .inner {
 			display: flex;
@@ -589,4 +593,60 @@ span[class="flashtext"] {
 				left:-170px;
 				top:-10px; 
 		}
+}
+
+/*MOBILE*/
+@media screen and (max-device-width:480px)
+{
+	.mobile-only{display: flex;}
+	
+	.not-on-mobile{display: none;}
+
+	#form { 
+		width:80%;
+		min-width: inherit;}
+
+  	#submit { width: 80%;}
+
+	.savoir-plus {
+		text-align: center;
+		margin-right: 20px;}
+
+	.ecris-moi {
+		width: auto;
+		font-size: 1.5em;}
+
+	#wrapper {
+		margin:auto;
+		background-image:none;
+		padding: none;
+		/*height: 100vh;*/}
+	
+	.inner {
+		margin:auto;
+		padding:5px;}
+
+	#header {
+		font-size: 1.8em;
+		height: 200px;}
+
+		#header .inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;}
+
+		#header .logo {
+			font-size: 5em;}
+			
+	.nav-social .icon {
+	    height: 40px;
+	    width: 40px;}
+
+	#main #inner {margin: 0;}
+
+	.hover-reveal.yes:hover::after {
+		position: absolute;
+			left:-170px;
+			top:-10px; }
+
 }

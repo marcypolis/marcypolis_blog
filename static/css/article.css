@@ -285,16 +285,69 @@ blockquote
 	font-weight: bold;
 }
 
-
-@media screen and (max-width: 500px), screen and (max-device-width:480px)
+/*RESPONSIVE*/
+@media screen and (max-width: 500px)
 {
 
+blockquote {
+	letter-spacing: 0.1em;
+	padding-left: 1.05em;}
 
-.principal
+.intro-stylise {
+    margin-bottom: 20px;
+	line-height: 120%;
+	height: 6em;}
+
+#inner p  /*texte plus petit*/
 	{
-		font-size: 2.2em;
-		text-align: justify;
+		font-size: 1.5em;
+		overflow: normal;
+		white-space: normal;
 	}
+
+figure[class="texte"]
+	{
+		font-size: 1.1em;
+	}
+	
+figure[class="image-intro"]
+	{
+		margin:auto;
+		justify-content: center;
+		align-content: center;
+		width:100%;
+	}
+
+
+figure[class="image-intro"] img[class="format-portrait"] /* img principale format portait*/
+{
+		max-height : 100vw;
+		width: 100%;
+		object-fit: contain;
+	}
+  figure[class="image-intro"] figcaption
+	{
+		margin-bottom: 25px;
+	}
+
+
+}
+
+/*MOBILE*/
+@media screen and (max-device-width:480px)
+{
+
+#tag li {
+	font-size: 1.8em;
+	}
+
+.principal {
+	font-size: 3.3em;
+	text-align: justify;}
+
+.sous-titre {
+	font-size: 2em;
+}
 
 blockquote {
 	letter-spacing: 0.1em;
@@ -309,10 +362,9 @@ blockquote {
 
 #inner p  /*texte plus petit*/
 	{
-		font-size: 1.1em;
+		font-size: 1.5em;
 		overflow: normal;
 		white-space: normal;
-
 	}
 
 figure[class="texte"]
